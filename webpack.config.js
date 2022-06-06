@@ -10,7 +10,7 @@ module.exports = {
   },
   mode: 'development',
   resolve: {
-    extensions: ['.js','.jsx']
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
@@ -32,11 +32,22 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader"
+          "style-loader",
+          "css-loader",
+          "sass-loader"
         ]
-      }
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]',
+            },
+          },
+        ],
+      },
     ]
   },
   plugins: [

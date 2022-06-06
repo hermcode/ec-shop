@@ -17,3 +17,8 @@ npm install babel-loader html-loader html-webpack-plugin
 ```
 npm install mini-css-extract-plugin css-loader style-loader sass sass-loader
 ```
+
+## Installing file loader
+```
+npm install file-loader
+```
