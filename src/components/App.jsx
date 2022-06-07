@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../containers/Layout';
-import Login from '../containers/Login';
+import NewPassword from '../containers/NewPassword';
 import '../styles/global.scss'
 
 const App = () => {
   return (
     <>
       <Layout>
-        <Login />
+        <NewPassword />
       </Layout>
     </>
   )
