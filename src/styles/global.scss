@@ -1,6 +1,4 @@
-$base-color: rgb(31 41 55);
-$color: #fff;
-$arial-font: Arial;
+@use 'vars';
 
 * {
   box-sizing: border-box;
@@ -9,7 +7,6 @@ $arial-font: Arial;
 }
 
 body {
-  background-color: $base-color;
-  color: $color;
-  font-family: $arial-font;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
 }
