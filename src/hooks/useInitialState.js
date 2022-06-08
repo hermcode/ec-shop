@@ -15,8 +15,16 @@ export const useInitialState = () => {
     })
   }
 
+  const removeFromCart = (indexToRemove) => {
+    setState({
+      ...state,
+      cart: state.cart.filter((_, indexCurrent) => indexCurrent !== indexToRemove)
+    })
+  }
+
   return {
     state,
-    addToCart
+    addToCart,
+    removeFromCart
   }
 }

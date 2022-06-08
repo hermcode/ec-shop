@@ -16,10 +16,10 @@ img {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--very-light-pink);
-  border-radius: 5px;
+  border-radius: 10px;
 }
