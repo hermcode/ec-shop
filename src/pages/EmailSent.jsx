@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '@logos/logo_yard_sale.svg'
 import email from '@icons/email.svg'
 import '@styles/EmailSent.scss'
+import { Link } from 'react-router-dom'
 
 const ResetPassword = () => {
   return (
@@ -13,10 +14,12 @@ const ResetPassword = () => {
         <div className="EmailSent-email-image">
           <img src={email} alt="email" />
         </div>
-        <button className="EmailSent-primary-button EmailSent-login-button">Login</button>
+        <Link to='/login' className='EmailSent-primary-button EmailSent-login-button'>
+          <button className="EmailSent-primary-button">Login</button>
+        </Link>
         <p className="EmailSent-resend">
           <span>Didn't receive the email?</span>
-          <a href="/"> Resend</a>
+          <Link to='/email-sent'> Resend</Link>
         </p>
       </div>
     </div>

@@ -1,22 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import OrderItem from '@components/OrderItem'
+import AppContext from '../context/AppContext'
 import '@styles/Checkout.scss'
+import totalSum from '../utils/totalSum'
 
 const Checkout = () => {
+	const { state: {cart} } = useContext(AppContext)
   return (
     <div className="Checkout">
 			<div className="Checkout-container">
-				<h1 className="title">My order</h1>
-				<div className="Checkout-content">
-					<div className="order">
+				<h1 className="Checkout-title">My order</h1>
+				<div className="Checkout-Checkout-content">
+					<div className="Checkout-order">
 						<p>
-							<span>03.25.21</span>
-							<span>6 articles</span>
+							<span></span>
+							<span>{cart.length} articles</span>
 						</p>
-						<p>$560.00</p>
+						<p>${totalSum(cart)}.00</p>
 					</div>
 				</div>
-				<OrderItem />
+				{
+					cart.map((product, index) => <OrderItem key={index} product={product} index={index}/>)
+				}
 			</div>
 		</div>
   )

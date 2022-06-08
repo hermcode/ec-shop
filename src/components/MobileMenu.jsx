@@ -1,46 +1,47 @@
 import React from 'react'
 import '@styles/MobileMenu.scss'
+import { Link } from 'react-router-dom'
 
-const MobileMenu = () => {
+const MobileMenu = ({handleHideAll}) => {
   return (
     <div className="MobileMenu">
       <ul>
         <li>
-          <a href="/">CATEGORIES</a>
+          <Link to="/" onClick={handleHideAll}>CATEGORIES</Link>
         </li>
         <li>
-          <a href="/">All</a>
+          <Link to="/" onClick={handleHideAll}>All</Link>
         </li>
         <li>
-          <a href="/">Clothes</a>
+          <Link to="/" onClick={handleHideAll}>Clothes</Link>
         </li>
         <li>
-          <a href="/">Electronics</a>
+          <Link to="/" onClick={handleHideAll}>Electronics</Link>
         </li>
         <li>
-          <a href="/">Furnitures</a>
+          <Link to="/" onClick={handleHideAll}>Furnitures</Link>
         </li>
         <li>
-          <a href="/">Toys</a>
+          <Link to="/" onClick={handleHideAll}>Toys</Link>
         </li>
         <li>
-          <a href="/">Other</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="/">My orders</a>
-        </li>
-        <li>
-          <a href="/">My account</a>
+          <Link to="/" onClick={handleHideAll}>Other</Link>
         </li>
       </ul>
       <ul>
         <li>
-          <a href="/" className="email">hermcode@gmail.com</a>
+          <Link to="/checkout" onClick={handleHideAll}>My orders</Link>
         </li>
         <li>
-          <a href="/" className="sign-out">Sign out</a>
+          <Link to="/account" onClick={handleHideAll}>My account</Link>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <Link to="/account" onClick={handleHideAll}className="email">hermcode@gmail.com</Link>
+        </li>
+        <li>
+          <Link to="/login" onClick={handleHideAll} className="sign-out">Sign out</Link>
         </li>
       </ul>
     </div>

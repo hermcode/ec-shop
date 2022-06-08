@@ -8,6 +8,7 @@ import MyOrder from '../containers/MyOrder';
 
 import '@styles/Header.scss';
 import MobileMenu from './MobileMenu';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -33,30 +34,38 @@ const Header = () => {
 		setShowMenu(false)
 	}
 
+	const handleHideAll = () => {
+		setShowOrders(false)
+		setShowMobileMenu(false)
+		setShowMenu(false)
+	}
+
 	return (
 		<>
 			<nav>
 				<img src={MenuIcon} alt="menu" className="Header-menu" onClick={handleShowMobileMenu}/>
 				<div className="Header-navbar-left">
-					<img src={logo} alt="logo" className="Header-logo" />
+					<Link to='/' onClick={handleHideAll}>
+						<img src={logo} alt="logo" className="Header-logo" />
+					</Link>
 					<ul>
 						<li>
-							<a href="/">All</a>
+							<Link to='/'>All</Link>
 						</li>
 						<li>
-							<a href="/">Clothes</a>
+							<Link to='/'>Clothes</Link>
 						</li>
 						<li>
-							<a href="/">Electronics</a>
+							<Link to='/'>Electronics</Link>
 						</li>
 						<li>
-							<a href="/">Furnitures</a>
+							<Link to='/'>Furnitures</Link>
 						</li>
 						<li>
-							<a href="/">Toys</a>
+							<Link to='/'>Toys</Link>
 						</li>
 						<li>
-							<a href="/">Others</a>
+							<Link to='/'>Others</Link>
 						</li>
 					</ul>
 				</div>
@@ -76,8 +85,8 @@ const Header = () => {
 						</li>
 					</ul>
 				</div>
-				{showMenu && <Menu />}
-				{showMobileMenu && <MobileMenu />}
+				{showMenu && <Menu handleShowMenu={handleShowMenu}/>}
+				{showMobileMenu && <MobileMenu handleHideAll={handleHideAll}/>}
 				{showOrders && <MyOrder handleShowOrders={handleShowOrders}/>}
 			
 			</nav>

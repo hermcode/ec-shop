@@ -1,5 +1,6 @@
 import React from 'react'
 import '@styles/CreateAccount.scss'
+import { Link } from 'react-router-dom'
 
 const CreateAccount = () => {
   return (
@@ -15,7 +16,9 @@ const CreateAccount = () => {
 						<label htmlFor="password" className="CreateAccount-label">Password</label>
 						<input type="password" id="password" placeholder="*********" className="CreateAccount-input input-password" />
 					</div>
-					<input type="submit" value="Create" className="CreateAccount-primary-button CreateAccount-login-button" />
+					<Link to='/'>
+						<input type="submit" value="Create" className="CreateAccount-primary-button CreateAccount-login-button" />
+					</Link>
 				</form>
 			</div>
 		</div>

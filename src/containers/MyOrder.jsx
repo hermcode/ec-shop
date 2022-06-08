@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import OrderItem from '@components/OrderItem';
 import ArrowIcon from '@icons/flechita.svg'
-import '@styles/MyOrder.scss';
 import AppContext from '../context/AppContext';
 import totalSum from '../utils/totalSum';
+
+import '@styles/MyOrder.scss';
 
 const MyOrder = ({handleShowOrders}) => {
 
@@ -28,9 +30,11 @@ const MyOrder = ({handleShowOrders}) => {
 					</p>
 					<p>${totalSum(cart)}.00</p>
 				</div>
-				<button className="MyOrder-primary-button">
-					Checkout
-				</button>
+				<Link to='/checkout'>
+					<button className="MyOrder-primary-button" onClick={handleShowOrders}>
+							Checkout
+					</button>
+				</Link>
 			</div>
 		</aside>
 	);

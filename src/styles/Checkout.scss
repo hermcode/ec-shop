@@ -5,7 +5,7 @@
 	display: grid;
 	place-items: center;
 }
-.title {
+.Checkout-title {
 	font-size: var(--lg);
 	margin-bottom: 40px;
 }
@@ -18,7 +18,7 @@
 	display: flex;
 	flex-direction: column;
 }
-.order {
+.Checkout-order {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	gap: 16px;
@@ -26,21 +26,21 @@
 	background-color: var(--text-input-field);
 	margin-bottom: 24px;
 	border-radius: 8px;
-	padding: 0 24px;
+	padding: 12px 24px;
 }
-.order p:nth-child(1) {
+.Checkout-order p:nth-child(1) {
 	display: flex;
 	flex-direction: column;
 }
-.order p span:nth-child(1) {
+.Checkout-order p span:nth-child(1) {
 	font-size: var(--md);
 	font-weight: bold;
 }
-.order p span:nth-child(2) {
+.Checkout-order p span:nth-child(2) {
 	font-size: var(--sm);
 	color: var(--very-light-pink);
 }
-.order p:nth-child(2) {
+.Checkout-order p:nth-child(2) {
 	text-align: end;
 	font-weight: bold;
 }

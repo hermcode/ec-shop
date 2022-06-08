@@ -1,18 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import '@styles/Menu.scss';
 
-const Menu = () => {
+const Menu = ({handleShowMenu}) => {
 	return (
 		<div className="Menu">
 			<ul>
 				<li>
-					<a href="/" className="title">My orders</a>
+					<Link to='/checkout' onClick={handleShowMenu}>My orders</Link>
 				</li>
 				<li>
-					<a href="/">My account</a>
+					<Link to='/account' onClick={handleShowMenu}>My Account</Link>
 				</li>
 				<li>
-					<a href="/">Sign out</a>
+					<Link to='/login' onClick={handleShowMenu}>Sign out</Link>
 				</li>
 			</ul>
 		</div>

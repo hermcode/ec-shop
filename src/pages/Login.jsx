@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '@logos/logo_yard_sale.svg'
 import '@styles/Login.scss'
 
@@ -23,10 +24,14 @@ const Login = () => {
 					<input type="text" name="email" placeholder="platzi@example.cm" className="Login-input Login-input-email" />
 					<label htmlFor="password" className="Login-label">Password</label>
 					<input type="password" name="password" placeholder="*********" className="Login-input Login-input-password" />
-					<input type="submit" value="Log in" className="Login-primary-button Login-login-button" onClick={handleSubmit}/>
-					<a href="/">Forgot my password</a>
+					<Link to='/'>
+						<input type="submit" value="Log in" className="Login-primary-button Login-login-button"/>
+					</Link>
+					<Link to='/password-recovery'>Forgot my password</Link>
 				</form>
-				<button className="Login-secondary-button Login-signup-button">Sign up</button>
+				<Link to='/signup'>
+					<button className="Login-secondary-button Login-signup-button">Sign up</button>
+				</Link>
 			</div>
 		</div>
   )
