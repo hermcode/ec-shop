@@ -8,24 +8,22 @@ import SpinnerLoader from '../components/SpinnerLoader';
 const API = 'https://api.escuelajs.co/api/v1/products?limit=21&offset=1'
 
 const ProductList = () => {
-
-	const [isLoading, setIsLoading] = useState(true)
-
-	const products = useGetProducts(API, setIsLoading)
-
-	if(isLoading) {
-		return <SpinnerLoader />
-	}
+	
+	const {products, isLoading} = useGetProducts(API)
 
 	return (
 		<section className="main-container">
-			<div className="ProductList">
-				{
-					products.map((product) => (
-						<ProductItem key={product.id} product={product} />
-					))
-				}
-			</div>
+			{
+				isLoading 
+				? <SpinnerLoader />
+				: <div className="ProductList">
+						{
+							products.map((product) => (
+								<ProductItem key={product.id} product={product} />
+							))
+						}
+					</div>
+			}
 		</section>
 	);
 }

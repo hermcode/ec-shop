@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
-export const useGetProducts = (url, setIsLoading) => {
+export const useGetProducts = (url) => {
+	const [ isLoading, setIsLoading ] = useState(true)
   const [ products, setProducts ] = useState([])
 
 	useEffect(() => {
@@ -9,12 +10,14 @@ export const useGetProducts = (url, setIsLoading) => {
 				const data = await fetch(url)
 				const response = await data.json()
 				setProducts(response)
+				setIsLoading(false)
 			}
 			getProducts()
-			setIsLoading(false)
-		}, 500)
-		
+		}, 4000)
 	}, [])
 
-  return products
+  return {
+		products,
+		isLoading
+	}
 }
