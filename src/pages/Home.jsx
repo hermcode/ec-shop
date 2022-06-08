@@ -1,12 +1,15 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import Header from '../components/Header'
 
-const Layout = () => {
+const Home = () => {
   return (
     <>
+      <Header />
       <Outlet />
     </>
+    
   )
 }
 
-export default Layout
+export default Home
