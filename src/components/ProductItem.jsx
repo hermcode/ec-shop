@@ -1,6 +1,6 @@
 import React from 'react';
-import AddToCartIcon from '../../public/assets/icons/bt_add_to_cart.svg'
-import '../styles/ProductItem.scss';
+import AddToCartIcon from '@icons/bt_add_to_cart.svg'
+import '@styles/ProductItem.scss';
 
 const ProductItem = () => {
 	return (

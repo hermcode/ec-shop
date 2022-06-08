@@ -1,7 +1,7 @@
 import React from 'react'
-import NotFoundImage from '../../public/assets/logos/page_not_found.svg'
+import NotFoundImage from '@logos/page_not_found.svg'
 
-import '../styles/NotFound.scss'
+import '@styles/NotFound.scss'
 
 const NotFound = () => {
   return (

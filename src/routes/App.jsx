@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from '../containers/Layout';
-import Login from '../pages/Login';
-import NewPassword from '../pages/NewPassword';
-import NotFound from '../pages/NotFound';
-import EmailSent from '../pages/EmailSent';
-import Home from '../pages/Home';
-import PasswordRecovery from '../pages/PasswordRecovery';
+import Layout from '@containers/Layout';
+import Login from '@pages/Login';
+import NewPassword from '@pages/NewPassword';
+import NotFound from '@pages/NotFound';
+import EmailSent from '@pages/EmailSent';
+import Home from '@pages/Home';
+import PasswordRecovery from '@pages/PasswordRecovery';
 
-import '../styles/global.scss'
-import MyAccount from '../pages/MyAccount';
-import CreateAccount from '../pages/CreateAccount';
-import Checkout from '../pages/Checkout';
-import Orders from '../pages/Orders';
-import ProductList from '../containers/ProductList';
+import '@styles/global.scss'
+import MyAccount from '@pages/MyAccount';
+import CreateAccount from '@pages/CreateAccount';
+import Checkout from '@pages/Checkout';
+import Orders from '@pages/Orders';
+import ProductList from '@containers/ProductList';
 
 const App = () => {
   return (

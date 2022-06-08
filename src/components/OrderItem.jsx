@@ -1,6 +1,6 @@
 import React from 'react';
-import CloseIcon from '../../public/assets/icons/icon_close.png'
-import '../styles/OrderItem.scss';
+import CloseIcon from '@icons/icon_close.png'
+import '@styles/OrderItem.scss';
 
 const OrderItem = () => {
   return (
