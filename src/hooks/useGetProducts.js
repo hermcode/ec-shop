@@ -13,7 +13,7 @@ export const useGetProducts = (url) => {
 				setIsLoading(false)
 			}
 			getProducts()
-		}, 4000)
+		}, 500)
 	}, [])
 
   return {
