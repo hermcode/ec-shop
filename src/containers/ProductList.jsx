@@ -5,11 +5,12 @@ import SpinnerLoader from '../components/SpinnerLoader';
 
 import '@styles/ProductList.scss';
 
-const API = 'https://api.escuelajs.co/api/v1/products'
+const API = 'https://api.escuelajs.co/api/v1/products?limit=49&offset=20'
 
 const ProductList = () => {
 
 	const {products, isLoading} = useGetProducts(API)
+	console.log(products);
 
 	return (
 		<section className="main-container">
